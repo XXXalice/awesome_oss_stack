@@ -168,6 +168,6 @@ SaaS: 何気なく使っているクラウドサービス
 
 # 無料APIお手軽提供環境
 
-* flask + ngrok
-* Flask + heroku
+* flask + ngrok + (docker)
+* Flask + heroku + (docker)
 
