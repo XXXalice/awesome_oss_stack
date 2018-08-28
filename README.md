@@ -163,3 +163,11 @@ SaaS: 何気なく使っているクラウドサービス
 * firebase
 * Elasticsearch
 * Back blaze
+
+
+
+# 無料APIお手軽提供環境
+
+* flask + ngrok
+* Flask + heroku
+
