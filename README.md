@@ -26,6 +26,8 @@ dockerはもちろん、amazon simple storage service（以降S3）ライクなo
 
 kubernetesにも対応して、これからどんどん普及して行くことだろう
 
+
+
 ##### 持論
 
 **とりあえずオフジェクトストレージはPUT（バケットに入れる）とGET（引っ張り出す）メソッドが機能すれば（個人開発なら）どうでもいい**
@@ -94,6 +96,8 @@ redisは全くわかりません　ごめんなさい
 
 # IaaS PaaS SaaS
 
+
+
 IaaS: 仮想鯖やストレージ、ネットワーク環境を自由に設定できる
 
 	そこに丸投げできる。つまりオンプレより楽にインフラが組める
@@ -146,6 +150,36 @@ ngrokの次くらいに簡単にサービスやAPIを提供できる
 
 
 
+* [IBM Bluemix]()
+
+
+
+月512Mまでタダ
+
+herokuに比べスリープしないため、そんなにアクセスの多くないサービスの運用に向いている
+
+APIは知らん
+
+
+
+* [GCP]()
+
+
+
+無料でガチるならおすすめ
+
+世界最強企業グーグルの強さを存分に体感しよう
+
+グーグル産のクーベももちろん備わっている
+
+本当にすごいなこの企業
+
+無料版を使い続けるのもあり　ていうかよっぽど大規模プロジェクトじゃないなら無料版でいい
+
+有料でやる場合は、引っ越ししやすいファイル構築や環境変数、データの保管などをしておいて、無料期間が終わったら新しく垢作ってそっちにサッと移行するのもあり？やったことないからわからん
+
+
+
 
 
 SaaS: 何気なく使っているクラウドサービス
@@ -154,7 +188,73 @@ SaaS: 何気なく使っているクラウドサービス
 
 
 
+* [Google Drive]()
 
+
+
+みんな使ってるGD、実はRESTapiが備わっていて使いやすいがこれをオブジェクトストレージがわりにするのはあまりオススメできない
+
+GAS好きならオススメ
+
+スプレッドシートと親和性が非常によろしい
+
+
+
+* [Gitlab]()
+
+
+
+webベースgit管理倉永遠の二番手
+
+しかし見やすいUI、洗礼されたUXなど使用満足度は個人的にgithubより勝る
+
+なにより強いのが、プライベートプロジェクト（labは1ソース群をプロジェクト、hubはリポジトリと呼ぶ）が無料で作れるところである
+
+そもそも、どうしてgithubは見えなくするのに金をとるのかわからない
+
+欠点としては、githubに比べて看板キャラがひじょ〜に弱い
+
+オクトキャットはゴーファーくんに次ぐくらい界隈でメジャーなのに対しgitlabの謎のキツネは名前すら知らない
+
+あと転職、就活の際はgithubのid提出を求められることがある　今までこの提出を求めてくるところで、gitlabのidでも可、というところは見たことない
+
+
+
+
+
+# 機械学習・深層学習
+
+* [ワトソン]()
+
+
+
+タダで使えないこともないらしい
+
+使うより使い道を考える方が難しい
+
+
+
+
+
+# ドメイン・レンタル鯖
+
+クラウドに株を奪われながらもなお生きる昔ながらのレンタル鯖
+
+無料なものには大体きつい容量制限があり、ウェブページを作ろうものならヘッダーフッターにセンスのないゴミみたいなアドセンスがついてくる
+
+FTPでファイルを鯖にアップする渋い豪の者にはおすすめ
+
+
+
+* [.tk]()
+
+
+
+ご存知トケラウ共和国の無料ドメイン
+
+でも取得手順が少し面倒くさいためドメイン取得が初めてという方はGMOとかでやっすいドメインを取得することをおすすめする
+
+SEOは悪い
 
 
 
@@ -170,4 +270,108 @@ SaaS: 何気なく使っているクラウドサービス
 
 * flask + ngrok + (docker)
 * Flask + heroku + (docker)
+
+随時追加
+
+
+
+# Google API上限
+
+| Service                                          | Request limitation          |
+| ------------------------------------------------ | --------------------------- |
+| Ad Exchange Buyer API                            | 1,000 リクエスト数/日       |
+| Ad Exchange Seller API                           | 10,000 リクエスト数/日      |
+| Admin SDK                                        | 150,000 リクエスト数/日     |
+| AdSense Host API                                 | 100,000 リクエスト数/日     |
+| AdSense Management API                           | 10,000 リクエスト数/日      |
+| Analytics API                                    | 50,000 リクエスト数/日      |
+| Apps Activity API                                | 10,000,000 リクエスト数/日  |
+| Audit API                                        | 10,000 リクエスト数/日      |
+| BigQuery API                                     | 200,000 リクエスト数/日     |
+| Blogger API v3                                   | 10,000 リクエスト数/日      |
+| Books API                                        | 1,000 リクエスト数/日       |
+| CalDAV API                                       | 1,000,000 リクエスト数/日   |
+| Calendar API                                     | 1,000,000 リクエスト数/日   |
+| Chrome Web Store API                             | なし                        |
+| Cloud Network Performance Monitoring API         | なし                        |
+| Contacts API                                     | 20,000,000 リクエスト数/日  |
+| Content API for Shopping                         | なし                        |
+| Custom Search API                                | 1,000 リクエスト数/日       |
+| DCM/DFA Reporting And Trafficking API            | 50,000 リクエスト数/日      |
+| Debuglet Controller API                          | 100,000 リクエスト数/日     |
+| Directions API                                   | 2,500 リクエスト数/日       |
+| Distance Matrix API                              | 2,500 リクエスト数/日       |
+| DoubleClick Search API                           | 100,000 リクエスト数/日     |
+| Drive API                                        | 10,000,000 リクエスト数/日  |
+| Drive SDK                                        | なし                        |
+| Elevation API                                    | 2,500 リクエスト数/日       |
+| Enterprise License Manager API                   | 10,000 リクエスト数/日      |
+| Fitness API                                      | 86,400 リクエスト数/日      |
+| Freebase API                                     | 100,000 リクエスト数/日     |
+| Fusion Tables API                                | 25,000 リクエスト数/日      |
+| Genomics API                                     | 50,000,000 リクエスト数/日  |
+| Geocoding API                                    | 2,500 リクエスト数/日       |
+| Gmail API                                        | 1,000,000,000 ユニット数/日 |
+| Google Affiliate Network API                     | 1,000 リクエスト数/日       |
+| Google Apps Marketplace API                      | 10,000 リクエスト数/日      |
+| Google Apps Marketplace SDK                      | なし                        |
+| Google Apps Reseller API                         | 10,000 リクエスト数/日      |
+| Google Civic Information API                     | 25,000 リクエスト数/日      |
+| Google Cloud Datastore API                       | 10,000,000 リクエスト数/日  |
+| Google Cloud Deployment Manager API              | 10,000 リクエスト数/日      |
+| Google Cloud DNS API                             | 50,000 リクエスト数/日      |
+| Google Cloud Messaging for Android               | なし                        |
+| Google Cloud Messaging for Chrome                | 10,000 リクエスト数/日      |
+| Google Cloud Monitoring API                      | 50,000 リクエスト数/日      |
+| Google Cloud Pub/Sub                             | なし                        |
+| Google Cloud SQL                                 | なし                        |
+| Google Cloud SQL API                             | 10,000 リクエスト数/日      |
+| Google Cloud Storage                             | なし                        |
+| Google Cloud Storage JSON API                    | なし                        |
+| Google Compute Engine                            | 無制限                      |
+| Google Compute Engine Autoscaler API             | 50,000 リクエスト数/日      |
+| Google Compute Engine Instance Group Manager API | 50,000 リクエスト数/日      |
+| Google Compute Engine Instance Groups API        | 1,000,000 リクエスト数/日   |
+| Google Contacts CardDAV API                      | 20,000,000 リクエスト数/日  |
+| Google Container Engine API                      | 1,000,000 リクエスト数/日   |
+| Google Maps Android API v2                       | なし                        |
+| Google Maps Coordinate API                       | 1,000 リクエスト数/日       |
+| Google Maps Embed API                            | 2,000,000 リクエスト数/日   |
+| Google Maps Engine API                           | 10,000 リクエスト数/日      |
+| Google Maps Geolocation API                      | 100 リクエスト数/日         |
+| Google Maps JavaScript API v3                    | 1,000,000 リクエスト数/日   |
+| Google Maps SDK for iOS                          | なし                        |
+| Google Maps Tracks API                           | なし                        |
+| Google Mirror API                                | 1,000 リクエスト数/日       |
+| Google Picker API                                | 10,000 リクエスト数/日      |
+| Google Play Android Developer API                | 200,000 リクエスト数/日     |
+| Google Play Game Management                      | 1,000,000 リクエスト数/日   |
+| Google Play Game Services                        | 50,000,000 リクエスト数/日  |
+| Google Play Game Services Publishing API         | 1,000,000 リクエスト数/日   |
+| Google Spectrum Database API                     | 1,000 リクエスト数/日       |
+| Google Webmaster Tools API                       | 1,000,000 リクエスト数/日   |
+| Google+ API                                      | 10,000 リクエスト数/日      |
+| Google+ Domains API                              | 10,000 リクエスト数/日      |
+| Google+ Hangouts API                             | なし                        |
+| Groups Migration API                             | 500,000 リクエスト数/日     |
+| Groups Settings API                              | 100,000 リクエスト数/日     |
+| Identity Toolkit API                             | 1,000,000 リクエスト数/日   |
+| Orkut REST API                                   | 250 リクエスト数/日         |
+| PageSpeed Insights API                           | 25,000 リクエスト数/日      |
+| Places API                                       | 100,000 リクエスト数/日     |
+| Prediction API                                   | 10,000 リクエスト数/日      |
+| QPX Express Airfare API                          | 50,000 リクエスト数/日      |
+| Safe Browsing API                                | 10,000 リクエスト数/日      |
+| Site Verification API                            | 100,000 リクエスト数/日     |
+| Static Maps API                                  | 1,000,000 リクエスト数/日   |
+| Street View Image API                            | 1,000,000 リクエスト数/日   |
+| Tag Manager API                                  | 10,000 リクエスト数/日      |
+| Tasks API                                        | 50,000 リクエスト数/日      |
+| Time Zone API                                    | 2,500 リクエスト数/日       |
+| Translate API                                    | 2,000,000 characters/day    |
+| URL Shortener API                                | 1,000,000 リクエスト数/日   |
+| Web Fonts Developer API                          | 10,000 リクエスト数/日      |
+| YouTube Analytics API                            | 100,000 リクエスト数/日     |
+| YouTube Data API v3                              | 50,000,000 ユニット数/日    |
+| Zync Render API                                  | 1,000,000 リクエスト数/日   |
 
